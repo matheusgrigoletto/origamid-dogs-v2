@@ -1,4 +1,8 @@
-export const Error = ({ message }: { message?: string | null }) => {
+type ErrorProps = {
+  message?: string | null;
+};
+
+export const Error = ({ message }: ErrorProps) => {
   if (!message) {
     return null;
   }
