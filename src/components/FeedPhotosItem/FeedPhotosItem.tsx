@@ -1,5 +1,6 @@
 import styles from "./FeedPhotosItem.module.css";
 import type { Photo } from "~/types/Photo";
+import { Image } from "~components/Image/Image";
 
 type FeedPhotosItemProps = {
   photo: Photo;
@@ -16,7 +17,7 @@ export const FeedPhotosItem = ({
 
   return (
     <li className={styles.photo} onClick={handleClick}>
-      <img src={photo.src} alt={photo.title} />
+      <Image src={photo.src} alt={photo.title} />
       <span className={styles.views}>{photo.acessos}</span>
     </li>
   );
