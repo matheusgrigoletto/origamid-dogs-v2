@@ -1,4 +1,4 @@
-import { Feed } from "~pages/Feed/Feed";
+import { Feed } from "~pages/Feed";
 
 export const Home = () => {
   return (

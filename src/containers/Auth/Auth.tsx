@@ -2,11 +2,12 @@ import { useContext } from "react";
 import { Navigate, Routes, Route } from "react-router-dom";
 
 import styles from "./Auth.module.css";
+
 import { UserContext } from "~/UserContext";
-import { Login } from "~pages/Auth/Login/Login";
-import { Signup } from "~pages/Auth/Signup/Signup";
-import { PasswordLost } from "~pages/Auth/PasswordLost/PasswordLost";
-import { PasswordReset } from "~pages/Auth/PasswordReset/PasswordReset";
+import { Login } from "~pages/Auth/Login";
+import { Signup } from "~pages/Auth/Signup";
+import { PasswordLost } from "~pages/Auth/PasswordLost";
+import { PasswordReset } from "~pages/Auth/PasswordReset";
 
 export const Auth = () => {
   const { login } = useContext(UserContext);

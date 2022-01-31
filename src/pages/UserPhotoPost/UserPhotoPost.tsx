@@ -2,12 +2,13 @@ import { useState, useEffect, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./UserPhotoPost.module.css";
+
 import { PHOTO_POST } from "~/api";
 import { useForm } from "~/hooks/useForm";
 import { useFetch } from "~/hooks/useFetch";
-import { Input } from "~/components/Input/Input";
-import { Button } from "~/components/Button/Button";
-import { Error } from "~/components/Error/Error";
+import { Input } from "~/components/Input";
+import { Button } from "~/components/Button";
+import { Error } from "~/components/Error";
 
 export const UserPhotoPost = () => {
   const navigate = useNavigate();
@@ -80,5 +81,3 @@ export const UserPhotoPost = () => {
     </section>
   );
 };
-
-export default UserPhotoPost;

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { Photo } from "~/types/Photo";
-import { FeedModal } from "~components/FeedModal/FeedModal";
-import { FeedPhotos } from "~components/FeedPhotos/FeedPhotos";
+import type { Photo } from "~/types/Photo";
+import { FeedModal } from "~components/FeedModal";
+import { FeedPhotos } from "~components/FeedPhotos";
 
 export const Feed = () => {
   const [modalPhoto, setModalPhoto] = useState<Photo>();

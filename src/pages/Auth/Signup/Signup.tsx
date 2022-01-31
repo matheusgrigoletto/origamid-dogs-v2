@@ -4,9 +4,9 @@ import { USER_POST } from "~/api";
 import { UserContext } from "~/UserContext";
 import { useForm } from "~hooks/useForm";
 import { useFetch } from "~hooks/useFetch";
-import { Input } from "~components/Input/Input";
-import { Button } from "~components/Button/Button";
-import { Error } from "~components/Error/Error";
+import { Input } from "~components/Input";
+import { Button } from "~components/Button";
+import { Error } from "~components/Error";
 
 export const Signup = () => {
   const username = useForm();

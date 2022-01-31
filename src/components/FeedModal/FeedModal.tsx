@@ -1,12 +1,13 @@
 import { useEffect, MouseEvent } from "react";
 
 import styles from "./FeedModal.module.css";
+
 import type { Photo } from "~/types/Photo";
 import { PHOTO_GET } from "~/api";
 import { useFetch } from "~hooks/useFetch";
-import { Error } from "~components/Error/Error";
-import { Loading } from "~components/Loading/Loading";
-import { PhotoContent } from "~components/PhotoContent/PhotoContent";
+import { Error } from "~components/Error";
+import { Loading } from "~components/Loading";
+import { PhotoContent } from "~components/PhotoContent";
 
 type FeedModalProps = {
   photo: Photo;

@@ -2,6 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 import styles from "./UserHeaderNav.module.css";
+
 import { ReactComponent as MinhasFotosSVG } from "~/assets/feed.svg";
 import { ReactComponent as EstatisticasSVG } from "~/assets/estatisticas.svg";
 import { ReactComponent as AdicionarFotoSVG } from "~/assets/adicionar.svg";

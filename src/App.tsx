@@ -1,15 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import { UserStorage } from "./UserContext";
-import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
-import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
-import { Home } from "./pages/Home/Home";
-import { Auth } from "./containers/Auth/Auth";
-import { User } from "./containers/User/User";
 
-function App() {
+import { UserStorage } from "./UserContext";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { ProtectedRoute } from "./components/ProtectedRoute";
+import { Home } from "./pages/Home";
+import { Auth } from "./containers/Auth";
+import { User } from "./containers/User";
+
+export const App = () => {
   return (
     <>
       <BrowserRouter>
@@ -32,6 +33,4 @@ function App() {
       </BrowserRouter>
     </>
   );
-}
-
-export default App;
+};

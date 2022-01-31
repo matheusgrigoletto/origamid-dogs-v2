@@ -1,9 +1,10 @@
 import { useContext, useEffect, useRef, useState } from "react";
 
 import styles from "./PhotoComments.module.css";
+
 import type { Comment } from "~/types/Comment";
 import { UserContext } from "~/UserContext";
-import { PhotoCommentsForm } from "~components/PhotoCommentsForm/PhotoCommentsForm";
+import { PhotoCommentsForm } from "~components/PhotoCommentsForm";
 
 type PhotoCommentsProps = {
   id: number;

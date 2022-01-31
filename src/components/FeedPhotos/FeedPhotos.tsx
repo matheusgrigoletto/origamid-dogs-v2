@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 
 import styles from "./FeedPhotos.module.css";
+
 import type { Photo } from "~/types/Photo";
 import { PHOTOS_GET } from "~/api";
 import { useFetch } from "~hooks/useFetch";
-import { FeedPhotosItem } from "~components/FeedPhotosItem/FeedPhotosItem";
-import { Loading } from "~components/Loading/Loading";
-import { Error } from "~components/Error/Error";
+import { FeedPhotosItem } from "~components/FeedPhotosItem";
+import { Loading } from "~components/Loading";
+import { Error } from "~components/Error";
 
 type FeedPhotosProps = {
   setModalPhoto: React.Dispatch<React.SetStateAction<Photo | undefined>>;
