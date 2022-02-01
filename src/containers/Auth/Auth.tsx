@@ -8,6 +8,7 @@ import { Login } from "~pages/Auth/Login";
 import { Signup } from "~pages/Auth/Signup";
 import { PasswordLost } from "~pages/Auth/PasswordLost";
 import { PasswordReset } from "~pages/Auth/PasswordReset";
+import { NotFound } from "~pages/NotFound";
 
 export const Auth = () => {
   const { login } = useContext(UserContext);
@@ -24,6 +25,7 @@ export const Auth = () => {
           <Route path="criar" element={<Signup />} />
           <Route path="perdeu" element={<PasswordLost />} />
           <Route path="resetar" element={<PasswordReset />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </section>

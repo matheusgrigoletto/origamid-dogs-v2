@@ -7,6 +7,7 @@ import { useFetch } from "~hooks/useFetch";
 import { Input } from "~components/Input";
 import { Button } from "~components/Button";
 import { Error } from "~components/Error";
+import { Head } from "~components/Head";
 
 export const Signup = () => {
   const username = useForm();
@@ -32,21 +33,24 @@ export const Signup = () => {
   }
 
   return (
-    <section className="animeLeft">
-      <h1 className="title">Cadastre-se</h1>
-      <form onSubmit={handleSubmit}>
-        <Input label="Usuário" type="text" name="username" {...username} />
-        <Input label="Email" type="email" name="email" {...email} />
-        <Input label="Senha" type="password" name="password" {...password} />
-        {loading ? (
-          <Button disabled type="button">
-            Cadastrando...
-          </Button>
-        ) : (
-          <Button type="submit">Cadastrar</Button>
-        )}
-        <Error message={error} />
-      </form>
-    </section>
+    <>
+      <Head title="Criar conta" />
+      <section className="animeLeft">
+        <h1 className="title">Cadastre-se</h1>
+        <form onSubmit={handleSubmit}>
+          <Input label="Usuário" type="text" name="username" {...username} />
+          <Input label="Email" type="email" name="email" {...email} />
+          <Input label="Senha" type="password" name="password" {...password} />
+          {loading ? (
+            <Button disabled type="button">
+              Cadastrando...
+            </Button>
+          ) : (
+            <Button type="submit">Cadastrar</Button>
+          )}
+          <Error message={error} />
+        </form>
+      </section>
+    </>
   );
 };

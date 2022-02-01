@@ -10,20 +10,33 @@ import { Loading } from "~components/Loading";
 import { Error } from "~components/Error";
 
 type FeedPhotosProps = {
+  user: number | string;
+  page: number;
   setModalPhoto: React.Dispatch<React.SetStateAction<Photo | undefined>>;
+  setHasMore: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const FeedPhotos = ({ setModalPhoto }: FeedPhotosProps) => {
+export const FeedPhotos = ({
+  user,
+  page = 1,
+  setModalPhoto,
+  setHasMore,
+}: FeedPhotosProps) => {
   const { data, loading, error, request } = useFetch();
 
   useEffect(() => {
     async function fetchPhotos() {
-      const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 });
-      await request(url, options);
+      const total = 6;
+      const { url, options } = PHOTOS_GET({ page, total, user });
+      const { response, json } = await request(url, options);
+
+      if (response && response.ok && json.length < total) {
+        setHasMore(false);
+      }
     }
 
     fetchPhotos();
-  }, [request]);
+  }, [request, user, page, setHasMore]);
 
   if (error) {
     return <Error message={error} />;

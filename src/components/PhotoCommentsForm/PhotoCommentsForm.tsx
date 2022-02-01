@@ -11,11 +11,13 @@ import { Error } from "~components/Error";
 type PhotoCommentsFormProps = {
   id: number;
   setComments: any;
+  single?: boolean;
 };
 
 export const PhotoCommentsForm = ({
   id,
   setComments,
+  single = false,
 }: PhotoCommentsFormProps) => {
   const [comment, setComment] = useState("");
   const { request, error } = useFetch();
@@ -37,7 +39,10 @@ export const PhotoCommentsForm = ({
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form
+      onSubmit={handleSubmit}
+      className={`${styles.form} ${single ? styles.single : ""}`}
+    >
       <textarea
         id="comment"
         name="comment"

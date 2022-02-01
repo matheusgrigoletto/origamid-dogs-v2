@@ -9,6 +9,7 @@ import { PhotoCommentsForm } from "~components/PhotoCommentsForm";
 type PhotoCommentsProps = {
   id: number;
   comments: Comment[];
+  single?: boolean;
 };
 
 export const PhotoComments = (props: PhotoCommentsProps) => {
@@ -22,7 +23,10 @@ export const PhotoComments = (props: PhotoCommentsProps) => {
 
   return (
     <>
-      <ul className={styles.comments} ref={commentsSection}>
+      <ul
+        className={`${styles.comments} ${props.single ? styles.single : ""}`}
+        ref={commentsSection}
+      >
         {comments.map((comment: Comment) => (
           <li key={comment.comment_ID}>
             <b>{comment.comment_author}: </b>
@@ -30,7 +34,13 @@ export const PhotoComments = (props: PhotoCommentsProps) => {
           </li>
         ))}
       </ul>
-      {login && <PhotoCommentsForm id={props.id} setComments={setComments} />}
+      {login && (
+        <PhotoCommentsForm
+          id={props.id}
+          single={props.single}
+          setComments={setComments}
+        />
+      )}
     </>
   );
 };

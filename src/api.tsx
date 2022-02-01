@@ -70,7 +70,7 @@ export function PHOTOS_GET({
 }: {
   page: number;
   total: number;
-  user: number;
+  user: number | string;
 }) {
   const url = `${API_URL}/api/photo/?_page=${page}&_total=${total}&_user=${user}`;
   return {
@@ -88,7 +88,6 @@ export function PHOTO_GET(id: number) {
     url,
     options: {
       method: "GET",
-      cache: "no-store",
     },
   };
 }
@@ -109,9 +108,48 @@ export function COMMENT_POST(id: number, body: Object, token: string) {
 
 export function PHOTO_DELETE(id: number, token: string) {
   return {
-    url: `${API_URL}/api/comment/${id}`,
+    url: `${API_URL}/api/photo/${id}`,
     options: {
       method: "DELETE",
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    },
+  };
+}
+
+export function PASSWORD_LOST(body: Object) {
+  return {
+    url: `${API_URL}/api/password/lost`,
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+
+export function PASSWORD_RESET(body: Object) {
+  return {
+    url: `${API_URL}/api/password/reset`,
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+
+export function STATS_GET(token: string) {
+  const url = `${API_URL}/api/stats`;
+  return {
+    url,
+    options: {
+      method: "GET",
       headers: {
         Authorization: "Bearer " + token,
       },

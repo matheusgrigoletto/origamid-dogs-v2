@@ -15,14 +15,15 @@ type PhotoContentProps = {
     photo: Photo;
     comments: Comment[];
   };
+  single?: boolean;
 };
 
-export const PhotoContent = ({ data }: PhotoContentProps) => {
+export const PhotoContent = ({ data, single = false }: PhotoContentProps) => {
   const user = useContext(UserContext);
   const { photo, comments } = data;
 
   return (
-    <div className={styles.photo}>
+    <div className={`${styles.photo} ${single ? styles.single : ""}`}>
       <div className={styles.img}>
         <Image src={photo.src} alt={photo.title} />
       </div>
@@ -46,7 +47,7 @@ export const PhotoContent = ({ data }: PhotoContentProps) => {
           </ul>
         </div>
       </div>
-      <PhotoComments id={photo.id} comments={comments} />
+      <PhotoComments id={photo.id} comments={comments} single={single} />
     </div>
   );
 };
