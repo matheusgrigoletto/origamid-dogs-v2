@@ -3,21 +3,30 @@ import { VictoryPie, VictoryBar, VictoryChart } from "victory";
 
 import styles from "./UserStatsGraphs.module.css";
 
+type UserStatsData = {
+  acessos: string;
+  id: number;
+  title: string;
+};
+
 type UserStatsGraphsProps = {
-  data: {
-    acessos: string;
-    id: number;
-    title: string;
-  }[];
+  data: UserStatsData[];
+};
+
+type GraphData = {
+  x: string;
+  y: number;
 };
 
 export const UserStatsGraphs = ({ data }: UserStatsGraphsProps) => {
-  const [graph, setGraph] = useState<{ x: string; y: number }[]>([]);
+  const [graph, setGraph] = useState<GraphData[]>([]);
   const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {
     setTotal(
-      data.map((item) => Number(item.acessos)).reduce((acc, num) => acc + num),
+      data
+        .map((item) => Number(item.acessos))
+        .reduce((acc, num) => acc + num, 0),
     );
 
     const graphData = data.map((item) => ({
@@ -29,7 +38,7 @@ export const UserStatsGraphs = ({ data }: UserStatsGraphsProps) => {
   }, [data]);
 
   return (
-    <section className={`${styles.graph} animeLeft`}>
+    <section className={`${styles.graph} slideIn`}>
       <div className={`${styles.total} ${styles.graphItem}`}>
         <p>Acessos: {total}</p>
       </div>

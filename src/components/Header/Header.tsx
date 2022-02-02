@@ -7,7 +7,27 @@ import { ReactComponent as DogsSVG } from "~assets/dogs.svg";
 import { UserContext } from "~/UserContext";
 
 export const Header = () => {
-  const { data } = useContext(UserContext);
+  const { data, loading } = useContext(UserContext);
+
+  const loginButton = () => {
+    if (data && !loading) {
+      return (
+        <Link className={styles.login} to="/conta">
+          {data.nome}
+        </Link>
+      );
+    }
+
+    if (loading) {
+      return <span className={styles.login}>...</span>;
+    }
+
+    return (
+      <Link className={styles.login} to="/login">
+        Login / Criar
+      </Link>
+    );
+  };
 
   return (
     <header className={styles.header}>
@@ -15,15 +35,7 @@ export const Header = () => {
         <Link className={styles.logo} to="/" aria-label="Dogos - Home">
           <DogsSVG />
         </Link>
-        {data ? (
-          <Link className={styles.login} to="/conta">
-            {data.nome}
-          </Link>
-        ) : (
-          <Link className={styles.login} to="/login">
-            Login / Criar
-          </Link>
-        )}
+        {loginButton()}
       </nav>
     </header>
   );

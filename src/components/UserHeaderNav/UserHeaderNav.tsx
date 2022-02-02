@@ -14,8 +14,8 @@ export const UserHeaderNav = () => {
   const { userLogout } = useContext(UserContext);
   const mobile = useMedia("(max-width: 40rem)");
   const [mobileMenu, setMobileMenu] = useState(false);
-
   const { pathname } = useLocation();
+
   useEffect(() => {
     setMobileMenu(false);
   }, [pathname]);
@@ -24,6 +24,7 @@ export const UserHeaderNav = () => {
     <>
       {mobile && (
         <button
+          type="button"
           aria-label="Menu"
           className={`${styles.mobileButton} ${
             mobileMenu && styles.mobileButtonActive
@@ -39,7 +40,7 @@ export const UserHeaderNav = () => {
       >
         <NavLink to="/conta" end>
           <MinhasFotosSVG />
-          {mobile && "Minhas Fotos"}
+          {mobile && "Minhas fotos"}
         </NavLink>
         <NavLink to="/conta/estatisticas">
           <EstatisticasSVG />
@@ -47,7 +48,7 @@ export const UserHeaderNav = () => {
         </NavLink>
         <NavLink to="/conta/postar">
           <AdicionarFotoSVG />
-          {mobile && "Adicionar Foto"}
+          {mobile && "Adicionar foto"}
         </NavLink>
         <button onClick={userLogout}>
           <SairSVG />

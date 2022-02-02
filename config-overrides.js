@@ -10,6 +10,7 @@ module.exports = function override(config) {
       "~containers": path.resolve(__dirname, "src/containers"),
       "~hooks": path.resolve(__dirname, "src/hooks"),
       "~pages": path.resolve(__dirname, "src/pages"),
+      "~types": path.resolve(__dirname, "src/types"),
       "~": path.resolve(__dirname, "src"),
     },
   };

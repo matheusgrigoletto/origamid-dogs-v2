@@ -1,6 +1,6 @@
 import styles from "./FeedPhotosItem.module.css";
 
-import type { Photo } from "~/types/Photo";
+import type { Photo } from "~types/Photo";
 import { Image } from "~components/Image";
 
 type FeedPhotosItemProps = {

@@ -3,27 +3,28 @@
 }
 
 .input {
-  display: block;
   padding: 0.8rem;
   width: 100%;
+  display: block;
   font-size: 1rem;
-  background: #eee;
-  border: 1px solid #eee;
+  color: var(--text-color);
+  background: var(--input-bg);
+  border: 1px solid var(--input-bg);
   border-radius: 0.4rem;
   transition: 0.2s;
 }
 
 .input:focus,
 .input:hover {
-  background: #fff;
-  border-color: #fb1;
-  box-shadow: 0 0 0 3px #fea;
+  background: var(--body-bg);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-shadow);
   outline: none;
 }
 
 .label {
-  display: block;
   padding-bottom: 0.5rem;
+  display: block;
   font-size: 1rem;
   line-height: 1;
 }
@@ -31,5 +32,5 @@
 .error {
   margin-top: 0.25rem;
   font-size: 0.875rem;
-  color: #f31;
+  color: var(--color-error);
 }

@@ -11,15 +11,16 @@ export const UserHeader = () => {
 
   useEffect(() => {
     const { pathname } = location;
+
     switch (pathname) {
       case "/conta/postar":
-        setTitle("Poste Sua Foto");
+        setTitle("Poste sua foto");
         break;
       case "/conta/estatisticas":
         setTitle("Estatísticas");
         break;
       default:
-        setTitle("Minha Conta");
+        setTitle("Minha conta");
     }
   }, [location]);
 

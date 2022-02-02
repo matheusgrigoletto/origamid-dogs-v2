@@ -5,6 +5,7 @@ import { useFetch } from "~hooks/useFetch";
 import { Head } from "~components/Head";
 import { Error } from "~components/Error";
 import { Loading } from "~components/Loading";
+
 const UserStatsGraphs = lazy(() => import("~components/UserStatsGraphs"));
 
 export const UserStats = () => {

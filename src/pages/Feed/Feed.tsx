@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import type { Photo } from "~/types/Photo";
+import type { Photo } from "~types/Photo";
 import { FeedModal } from "~components/FeedModal";
 import { FeedPhotos } from "~components/FeedPhotos";
 
@@ -16,6 +16,7 @@ export const Feed = ({ user }: FeedProps) => {
   useEffect(() => {
     let wait = false;
     let timeout: any;
+
     const infinteScroll = () => {
       if (hasMore) {
         const scrollY = window.scrollY;
@@ -24,6 +25,7 @@ export const Feed = ({ user }: FeedProps) => {
         if (scrollY > height * 0.75 && !wait) {
           setPages((pages: number[]) => [...pages, pages.length + 1]);
           wait = true;
+
           timeout = setTimeout(() => {
             wait = false;
           }, 500);

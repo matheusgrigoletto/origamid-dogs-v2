@@ -29,11 +29,11 @@ export const PhotoDeleteButton = ({ id }: PhotoDeleteButtonProps) => {
   return (
     <>
       {loading ? (
-        <button className={styles.button} disabled>
+        <button className={styles.button} type="button" disabled>
           Apagando...
         </button>
       ) : (
-        <button className={styles.button} onClick={handleClick}>
+        <button className={styles.button} type="button" onClick={handleClick}>
           Apagar
         </button>
       )}

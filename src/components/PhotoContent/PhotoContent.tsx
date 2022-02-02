@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import styles from "./PhotoContent.module.css";
 
 import { UserContext } from "~/UserContext";
-import type { Photo } from "~/types/Photo";
-import type { Comment } from "~/types/Comment";
+import type { Photo } from "~types/Photo";
+import type { Comment } from "~types/Comment";
 import { PhotoComments } from "~components/PhotoComments";
 import { PhotoDeleteButton } from "~components/PhotoDeleteButton";
 import { Image } from "~components/Image";

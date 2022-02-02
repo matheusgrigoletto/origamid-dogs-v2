@@ -8,10 +8,10 @@
   display: flex;
   justify-content: center;
   padding: 2rem calc(4rem + 15px) 2rem 4rem;
-  background: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
 }
 
-@media (max-width: 40rem) {
+@media screen and (max-width: 40rem) {
   .modal {
     padding: 2rem calc(2rem + 15px) 2rem 4rem;
   }

@@ -2,18 +2,19 @@
   padding: 0.3rem 0.6rem;
   font-size: 0.875rem;
   line-height: 1;
-  font-family: var(--type-first);
+  font-family: var(--font-primary);
+  background: var(--text-color-lighter);
   border: 1px solid transparent;
-  background: #ddd;
   border-radius: 0.4rem;
   cursor: pointer;
   transition: 0.1s;
 }
 
+.button:active,
 .button:hover,
 .button:focus {
-  background: #fff;
-  border-color: #333;
-  box-shadow: 0 0 0 3px #eee;
+  background: var(--body-bg);
+  border-color: var(--text-color);
+  box-shadow: 0 0 0 3px var(--input-bg);
   outline: none;
 }

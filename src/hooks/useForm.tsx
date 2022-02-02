@@ -28,7 +28,7 @@ export const useForm = (type?: string) => {
   const [value, setValue] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
 
-  function validate(value: string) {
+  const validate = (value: string) => {
     if (!type) {
       return true;
     }
@@ -45,15 +45,15 @@ export const useForm = (type?: string) => {
 
     setError(null);
     return true;
-  }
+  };
 
-  function onChange({ target }: { target: any }) {
+  const onChange = ({ target }: { target: any }) => {
     if (error) {
       validate(target.value);
     }
 
     setValue(target.value);
-  }
+  };
 
   return {
     value,

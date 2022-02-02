@@ -4,7 +4,7 @@ import styles from "./PhotoCommentsForm.module.css";
 
 import { ReactComponent as EnviarSVG } from "~assets/enviar.svg";
 import { COMMENT_POST } from "~/api";
-import type { Comment } from "~/types/Comment";
+import type { Comment } from "~types/Comment";
 import { useFetch } from "~hooks/useFetch";
 import { Error } from "~components/Error";
 

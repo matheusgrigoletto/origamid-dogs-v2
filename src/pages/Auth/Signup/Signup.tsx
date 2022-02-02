@@ -35,14 +35,14 @@ export const Signup = () => {
   return (
     <>
       <Head title="Criar conta" />
-      <section className="animeLeft">
+      <section className="slideIn">
         <h1 className="title">Cadastre-se</h1>
         <form onSubmit={handleSubmit}>
           <Input label="Usuário" type="text" name="username" {...username} />
           <Input label="Email" type="email" name="email" {...email} />
           <Input label="Senha" type="password" name="password" {...password} />
           {loading ? (
-            <Button disabled type="button">
+            <Button type="button" disabled>
               Cadastrando...
             </Button>
           ) : (

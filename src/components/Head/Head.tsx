@@ -13,5 +13,5 @@ export const Head = (props: HeadProps) => {
       ?.setAttribute("content", props.description || "");
   }, [props]);
 
-  return <></>;
+  return null;
 };

@@ -17,6 +17,7 @@ export const Photo = () => {
       const { url, options } = PHOTO_GET(Number(id));
       await request(url, options);
     };
+
     fetchPhoto();
   }, [id, request]);
 

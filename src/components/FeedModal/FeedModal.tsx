@@ -2,7 +2,7 @@ import { useEffect, MouseEvent } from "react";
 
 import styles from "./FeedModal.module.css";
 
-import type { Photo } from "~/types/Photo";
+import type { Photo } from "~types/Photo";
 import { PHOTO_GET } from "~/api";
 import { useFetch } from "~hooks/useFetch";
 import { Error } from "~components/Error";

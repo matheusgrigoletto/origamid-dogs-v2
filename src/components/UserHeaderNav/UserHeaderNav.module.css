@@ -11,42 +11,53 @@
   justify-content: center;
   height: 40px;
   width: 40px;
-  background: #eee;
-  border-radius: 0.2rem;
+  background: var(--input-bg);
   border: 1px solid transparent;
+  border-radius: 0.2rem;
   transition: 0.1s;
   cursor: pointer;
 }
 
+.nav a:active,
 .nav a:hover,
 .nav a:focus,
+.nav button:active,
 .nav button:hover,
 .nav button:focus {
-  background: white;
-  border-color: #333;
-  box-shadow: 0 0 0 3px #eee;
+  background: var(--body-bg);
+  border-color: var(--text-color);
+  box-shadow: 0 0 0 3px var(--input-bg);
   outline: none;
 }
 
+.nav a:active svg > *,
+.nav a:hover svg > *,
+.nav a:focus svg > *,
+.nav button:active svg > *,
+.nav button:hover svg > *,
+.nav button:focus svg > * {
+  fill: var(--text-color);
+}
+
 .nav :global(a.active) {
-  background: white;
-  border-color: #fb1;
-  box-shadow: 0 0 0 3px #fea;
+  background: var(--body-bg);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-shadow);
 }
 
 .nav :global(a.active) svg > * {
-  fill: #fb1;
+  fill: var(--color-primary);
 }
 
 .mobileButton {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  width: 40px;
-  padding: 0;
+  background: var(--input-bg);
   border: 1px solid transparent;
-  background: #eee;
   border-radius: 0.2rem;
   transition: 0.1s;
   cursor: pointer;
@@ -54,9 +65,9 @@
 
 .mobileButton::after {
   content: "";
-  display: block;
   width: 1.2rem;
   height: 2px;
+  display: block;
   background: currentColor;
   border-radius: 2px;
   box-shadow: 0 6px currentColor, 0 -6px currentColor;
@@ -66,10 +77,10 @@
 .mobileButton:focus,
 .mobileButton:hover,
 .mobileButtonActive {
-  color: #fb1;
-  background: white;
-  border-color: #fb1;
-  box-shadow: 0 0 0 3px #fea;
+  color: var(--color-primary);
+  background: var(--input-bg);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-shadow);
   outline: none;
 }
 
@@ -81,12 +92,12 @@
 }
 
 .navMobile {
-  display: block;
-  padding: 0 1rem;
   position: absolute;
+  padding: 0 1rem;
   top: 70px;
   right: 0px;
-  background: white;
+  display: block;
+  background: var(--body-bg);
   border-radius: 0.2rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transform: translateX(-10px);
@@ -110,13 +121,13 @@
   width: 100%;
   background: none;
   border: none;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--input-bg);
   cursor: pointer;
 }
 
 .navMobile a:hover svg > *,
 .navMobile button:hover svg > * {
-  fill: #fb1;
+  fill: var(--color-primary);
 }
 
 .navMobile button {

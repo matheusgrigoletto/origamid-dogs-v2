@@ -18,6 +18,7 @@ export const PasswordReset = () => {
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
+
     if (password.validate()) {
       const { url, options } = PASSWORD_RESET({
         login,
@@ -49,7 +50,7 @@ export const PasswordReset = () => {
   return (
     <>
       <Head title="Redefinir senha" />
-      <section className="animeLeft">
+      <section className="slideIn">
         <h1 className="title">Redefinir a senha</h1>
         <form onSubmit={handleSubmit}>
           <Input
@@ -59,7 +60,7 @@ export const PasswordReset = () => {
             {...password}
           />
           {loading ? (
-            <Button disabled type="button">
+            <Button type="button" disabled>
               Enviando...
             </Button>
           ) : (

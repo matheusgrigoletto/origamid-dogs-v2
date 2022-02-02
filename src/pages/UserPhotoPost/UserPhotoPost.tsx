@@ -27,7 +27,7 @@ export const UserPhotoPost = () => {
     }
   }, [data, navigate]);
 
-  function handleSubmit(event: FormEvent) {
+  const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
 
     const formData = new FormData();
@@ -39,17 +39,17 @@ export const UserPhotoPost = () => {
     const token = window.localStorage.getItem("token");
     const { url, options } = PHOTO_POST(formData, token!);
     request(url, options);
-  }
+  };
 
-  function handleImgChange({ target }: { target: any }) {
+  const handleImgChange = ({ target }: { target: any }) => {
     setImg({
       preview: URL.createObjectURL(target.files[0]),
       raw: target.files[0],
     });
-  }
+  };
 
   return (
-    <section className={`${styles.photoPost} animeLeft`}>
+    <section className={`${styles.photoPost} slideIn`}>
       <form onSubmit={handleSubmit}>
         <Input label="Nome" type="text" name="nome" {...nome} />
         <Input label="Peso" type="number" name="peso" {...peso} />
@@ -62,7 +62,7 @@ export const UserPhotoPost = () => {
           onChange={handleImgChange}
         />
         {loading ? (
-          <Button disabled type="button">
+          <Button type="button" disabled>
             Enviando...
           </Button>
         ) : (

@@ -4,10 +4,10 @@ export const useMedia = (query: string) => {
   const [match, setMatch] = useState<boolean | null>(null);
 
   useEffect(() => {
-    function changeMatch() {
+    const changeMatch = () => {
       const { matches } = window.matchMedia(query);
       setMatch(matches);
-    }
+    };
 
     changeMatch();
 

@@ -1,14 +1,14 @@
 .login {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 100vh;
   gap: 2rem;
+  min-height: 100vh;
 }
 
 .login::before {
   content: "";
   display: block;
-  background: url("../../assets/login.jpg") no-repeat center center;
+  background: url("../../assets/login2.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -18,7 +18,7 @@
   margin-top: 20%;
 }
 
-@media (max-width: 40rem) {
+@media screen and (max-width: 40rem) {
   .login {
     grid-template-columns: 1fr;
   }

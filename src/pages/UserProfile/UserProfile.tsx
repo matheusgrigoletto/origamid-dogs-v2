@@ -5,12 +5,17 @@ import { Feed } from "~pages/Feed";
 
 export const UserProfile = () => {
   const { user } = useParams();
+
   return (
     <>
-      <Head title={user!} />
+      <Head title={String(user)} />
       <section className="container main-container">
-        <h1 className="title">{user}</h1>
-        {user && <Feed user={user} />}
+        {user && (
+          <>
+            <h1 className="title">{user}</h1>
+            <Feed user={user} />
+          </>
+        )}
       </section>
     </>
   );

@@ -10,12 +10,16 @@
 
 .loading {
   margin: auto;
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
+  padding-left: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 5px;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--loading-bg);
   border-radius: 50%;
+}
+
+.loading svg path {
+  fill: var(--text-color);
 }
