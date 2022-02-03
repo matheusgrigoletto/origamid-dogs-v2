@@ -72,7 +72,7 @@ export const UserStorage = ({
       window.localStorage.setItem("token", token);
 
       await getUser(token);
-      navigate("/conta");
+      navigate("/");
     } catch (err: any) {
       setError(err.message);
       setLogin(false);

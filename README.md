@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+<img src="./public/apple-touch-icon.png" width="48">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dogos
 
-## Available Scripts
+> Projeto de conclusão do curso **React completo**, da [Origamid](https://www.origamid.com/curso/react-completo/).
 
-In the project directory, you can run:
+### 💡 Contexto
 
-### `yarn start`
+Neste curso você irá aprender a como utilizar o React do zero para o desenvolvimento de aplicações web reativas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Você irá aprender a criar um aplicativo web com funcionalidades parecidas de redes sociais como o Instagram.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+O foco do curso é no entendimento completo do React, com isso praticamente tudo será criado do zero, sem a dependência de pacotes externos.
 
-### `yarn test`
+### 🔥 Motivação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Buscando aprimorar e evoluir com a bibllioteca, decidi finalizar este excelente curso da Origamid, mistrado pelo André Rafael. São várias sacadas que ele oferece, além do básico e até conceitos mais avançados com o próprio React.
 
-### `yarn build`
+Para este projeto acabei adicionando mais funcionalidades que ele apresenta no curso, como o _dark mode_ (com o CSS media `prefers-color-scheme: dark`) uso de TypeScript (ao invés de simplesmente JavaScript), além de alterar a estrutura de arquivos e pastas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Enfim, uma forma de crescer e aumentar ainda mais a experiência em React.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🚀 Resultado
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Demo](./docs/demo.gif)
+![tela01](./docs/screen01.png)
+![tela02](./docs/screen02.png)
+![tela03](./docs/screen03.png)
+![tela04](./docs/screen04.png)
 
-### `yarn eject`
+#### ⚙️ Instalação
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para inicializar o projeto localmente, siga os passos descritos abaixo:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Clone o repositório
+$ git clone https://github.com/matheusgrigoletto/origamid-dogs-v2.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Entre no repositório
+$ cd origamid-dogs-v2
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Instale as dependências
+$ yarn
 
-## Learn More
+# Se preferir, pode utilizar o NPM:
+$ npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Execute a aplicação
+$ yarn start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Ou, com o NPM:
+$ npm start
+```
+
+Por fim, acesse a aplicação em <http://localhost:3000>.
+
+> Como estamos usando a API da Origamid, os dados são resetados a cada 10 minutos.
+
+### 🍻 Contato
+
+Qualquer dúvida ou feedback você pode me encontrar em qualquer um desses lugares:
+
+<p align="center">
+<a href="mailto:eu@matheusgrigoletto.com" target="_blank">
+<img src="https://img.shields.io/badge/e--mail-eu%40matheusgrigoletto.com-blueviolet" alt="eu@matheusgrigoletto.com">
+</a>
+
+<a href="https://www.linkedin.com/in/matheus-grigoletto/" target="_blank">
+<img src="https://img.shields.io/badge/linkedin-Matheus%20Grigoletto-blue" alt="https://www.linkedin.com/in/matheus-grigoletto/">
+</a>
+
+<a href="https://matheusgrigoletto.com" target="_blank">
+<img src="https://img.shields.io/badge/site-matheusgrigoletto.com-black" alt="https://matheusgrigoletto.com">
+</a>
+</p>

@@ -14,7 +14,7 @@ export const Auth = () => {
   const { login } = useContext(UserContext);
 
   if (login === true) {
-    return <Navigate to="/conta" />;
+    return <Navigate to="/" />;
   }
 
   return (
